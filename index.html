@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторная работа №2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Лабораторная работа №2</h1>
+    <p>Тема: Линейный вычислительный процесс</p>
+  </header>
+
+  <!-- Задание и цели -->
+  <section>
+    <h2>Задание к работе</h2>
+    <p><strong>Цели и задачи работы:</strong> изучение функций ввода-вывода данных, программирование вычисления значения выражения.</p>
+    <p><strong>Задание к работе:</strong> Реализовать линейный вычислительный процесс. Самостоятельно решить задачу в соответствии с индивидуальным вариантом.</p>
+    <p><strong>Требования к отчету:</strong> Отчет должен содержать титульный лист, задание, блок-схему алгоритма решения задачи, текст программы с комментариями, тесты.</p>
+  </section>
+
+  <!-- Задание 1 -->
+  <section>
+    <h2>Задание 1</h2>
+    <p>Дана сторона квадрата a. Найти квадрат его периметра P = 4·a.</p>
+    <textarea id="code1" readonly>
+function calculatePerimeter() {
+  let a = parseFloat(prompt('Введите сторону квадрата:'));
+  if (!isNaN(a)) {
+    let P = Math.pow(4 * a, 2);
+    alert('Квадрат периметра квадрата: ' + P);
+  } else {
+    alert('Введите корректное число');
+  }
+}
+    </textarea>
+    <button onclick="calculatePerimeter()">Выполнить код</button>
+    <p><strong>Объяснение:</strong> Все входные и выходные данные являются вещественными числами.</p>
+  </section>
+
+  <!-- Задание 2 -->
+  <section>
+    <h2>Задание 2</h2>
+    <p>Дано расстояние L в сантиметрах. Используя операцию деления нацело, найти количество полных метров в нем (1 метр = 100 см).</p>
+    <textarea id="code2" readonly>
+function calculateMeters() {
+  let L = parseInt(prompt('Введите расстояние в сантиметрах:'));
+  if (!isNaN(L) && L >= 0) {
+    let meters = Math.floor(L / 100);
+    alert('Количество полных метров: ' + meters);
+  } else {
+    alert('Введите корректное число');
+  }
+}
+    </textarea>
+    <button onclick="calculateMeters()">Выполнить код</button>
+    <p><strong>Объяснение:</strong> Все входные и выходные данные являются целыми числами. Все числа, для которых указано количество цифр (двузначное число, трехзначное число и т. д.), считаются положительными.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Лабораторная работа №2</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
