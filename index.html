@@ -26,14 +26,12 @@
     <h2>Задание 1</h2>
     <p>Дана сторона квадрата a. Найти квадрат его периметра P = 4·a.</p>
     <textarea id="code1" readonly>
-function calculatePerimeter() {
-  let a = parseFloat(prompt('Введите сторону квадрата:'));
-  if (!isNaN(a)) {
+let a = parseFloat(prompt('Введите сторону квадрата:'));
+if (!isNaN(a)) {
     let P = Math.pow(4 * a, 2);
     alert('Квадрат периметра квадрата: ' + P);
-  } else {
+} else {
     alert('Введите корректное число');
-  }
 }
     </textarea>
     <button onclick="calculatePerimeter()">Выполнить код</button>
@@ -45,14 +43,12 @@ function calculatePerimeter() {
     <h2>Задание 2</h2>
     <p>Дано расстояние L в сантиметрах. Используя операцию деления нацело, найти количество полных метров в нем (1 метр = 100 см).</p>
     <textarea id="code2" readonly>
-function calculateMeters() {
-  let L = parseInt(prompt('Введите расстояние в сантиметрах:'));
-  if (!isNaN(L) && L >= 0) {
+let L = parseFloat(prompt('Введите расстояние в сантиметрах:'));
+if (Number.isInteger(L) && L >= 0) {
     let meters = Math.floor(L / 100);
     alert('Количество полных метров: ' + meters);
-  } else {
-    alert('Введите корректное число');
-  }
+} else {
+    alert('Введите корректное целое число');
 }
     </textarea>
     <button onclick="calculateMeters()">Выполнить код</button>
