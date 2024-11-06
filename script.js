@@ -9,7 +9,7 @@ let a = parseFloat(prompt('Введите сторону квадрата:'));
     };
 
 document.getElementById("CalculateMetrs").onclick = () => {
-let L = parseInt(prompt('Введите расстояние в сантиметрах:'));
+let L = parseFloat(prompt('Введите расстояние в сантиметрах:'));
         if (Number.isInteger(L) && L >= 0) {
             let meters = Math.floor(L / 100);
             alert('Количество полных метров: ' + meters);
